@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const InstagramIcon = ({ size = 24, className = "" }) => (
   <svg 
@@ -23,33 +23,81 @@ const InstagramIcon = ({ size = 24, className = "" }) => (
   </svg>
 );
 
+interface IGPost {
+  id: string;
+  image: string;
+  link: string;
+}
+
 export default function InstagramFeed() {
-  // IMPORTANT: Instagram blocks direct frontend scraping without a server token.
-  // The global industry standard for static sites (like this one) is a free Widget provider like Elfsight.
-  // Go to https://elfsight.com/instagram-feed-instashow/
-  // Create a free feed connected to your account, and paste your Widget ID here:
-  const ELFSIGHT_WIDGET_ID = ""; // Paste your Widget ID here: "a1b2c3d4-e5f6-7890-1234-567890abcdef"
+  const [posts, setPosts] = useState<IGPost[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (ELFSIGHT_WIDGET_ID) {
-      const script = document.createElement("script");
-      script.src = "https://static.elfsight.com/platform/platform.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, [ELFSIGHT_WIDGET_ID]);
-
-  // Import static assets to ensure absolute URL resolution on GitHub Pages
+  // Import static fallbacks in case API isn't configured
   const imgGallery = require("../../../public/assets/gallery_placeholder_1776498616522.png");
   const imgProcess = require("../../../public/assets/process_texture_1776498601479.png");
   const imgHero = require("../../../public/assets/hero_mud_art_1776498586869.png");
 
-  const posts = [
-    { id: 1, image: imgGallery, link: "https://www.instagram.com/craftchirp_creations/" },
-    { id: 2, image: imgProcess, link: "https://www.instagram.com/craftchirp_creations/" },
-    { id: 3, image: imgHero, link: "https://www.instagram.com/craftchirp_creations/" },
-    { id: 4, image: imgGallery, link: "https://www.instagram.com/craftchirp_creations/" },
-  ];
+  useEffect(() => {
+    async function fetchInstagram() {
+      // Allow user to supply either a direct Instagram Graph API token OR a proxy JSON URL (like Behold.so)
+      const igToken = process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN;
+      const proxyUrl = process.env.NEXT_PUBLIC_BEHOLD_URL;
+
+      try {
+        if (igToken) {
+          // Method 1: Official Instagram Graph API (Requires Token Refresh every 60 days)
+          const res = await fetch(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,permalink&access_token=${igToken}`);
+          const { data } = await res.json();
+          if (data) {
+            const formatted = data
+              // Filter out videos unless thumbnail is present, to keep UI clean
+              .filter((p: any) => p.media_type === "IMAGE" || p.media_type === "CAROUSEL_ALBUM")
+              .slice(0, 4)
+              .map((p: any) => ({
+                id: p.id,
+                image: p.media_url,
+                link: p.permalink
+              }));
+            setPosts(formatted);
+          }
+        } else if (proxyUrl) {
+          // Method 2: Public JSON proxy service (e.g. Behold.so or Juicer API)
+          const res = await fetch(proxyUrl);
+          const data = await res.json();
+          if (data && Array.isArray(data)) {
+            const formatted = data.slice(0, 4).map((p: any) => ({
+              id: p.id,
+              image: p.mediaUrl || p.media_url || p.image,
+              link: p.permalink || p.link
+            }));
+            setPosts(formatted);
+          }
+        } else {
+          // Fallback to static if no URL/Token is configured in .env yet
+          setPosts([
+            { id: "fallback-1", image: imgGallery, link: "https://www.instagram.com/craftchirp_creations/" },
+            { id: "fallback-2", image: imgProcess, link: "https://www.instagram.com/craftchirp_creations/" },
+            { id: "fallback-3", image: imgHero, link: "https://www.instagram.com/craftchirp_creations/" },
+            { id: "fallback-4", image: imgGallery, link: "https://www.instagram.com/craftchirp_creations/" },
+          ]);
+        }
+      } catch (err) {
+        console.error("Failed to fetch Instagram feed natively:", err);
+        // Fallback array if fetch explicitly fails
+        setPosts([
+          { id: "fallback-1", image: imgGallery, link: "https://www.instagram.com/craftchirp_creations/" },
+          { id: "fallback-2", image: imgProcess, link: "https://www.instagram.com/craftchirp_creations/" },
+          { id: "fallback-3", image: imgHero, link: "https://www.instagram.com/craftchirp_creations/" },
+          { id: "fallback-4", image: imgGallery, link: "https://www.instagram.com/craftchirp_creations/" },
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchInstagram();
+  }, [imgGallery, imgHero, imgProcess]);
 
   return (
     <section className="py-24 bg-brand-sand text-[#2d2a26] overflow-hidden">
@@ -70,13 +118,14 @@ export default function InstagramFeed() {
           </a>
         </div>
 
-        {ELFSIGHT_WIDGET_ID ? (
-          <div className="w-full">
-            <div className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`}></div>
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {posts.map((post, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {loading ? (
+            // Skeleton Loader while API is fetching
+            Array.from({ length: 4 }).map((_, i) => (
+              <div key={i} className="h-64 md:h-80 w-full bg-black/10 animate-pulse rounded-sm" />
+            ))
+          ) : (
+            posts.map((post, index) => (
               <motion.a
                 key={post.id}
                 href={post.link}
@@ -86,12 +135,13 @@ export default function InstagramFeed() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "0px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative h-64 md:h-80 w-full block overflow-hidden rounded-sm"
+                className="group relative h-64 md:h-80 w-full block overflow-hidden rounded-sm bg-brand-clay/20"
               >
                 <Image
                   src={post.image}
-                  alt="Instagram post placeholder"
+                  alt={`Instagram Post ${index + 1}`}
                   fill
+                  unoptimized={typeof post.image === "string" && post.image.startsWith("http")} // Do not optimize external ig images as they are already CDN hosted
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
@@ -99,9 +149,9 @@ export default function InstagramFeed() {
                   <InstagramIcon size={32} className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300" />
                 </div>
               </motion.a>
-            ))}
-          </div>
-        )}
+            ))
+          )}
+        </div>
 
       </div>
     </section>
