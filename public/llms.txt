@@ -1,0 +1,20 @@
+# CraftChirp Creations - Eco-Luxury Handmade Mud Art
+
+> Premium eco-friendly handcrafted mud art. Zero chemicals, odorless, and beautifully textured for the modern sanctuary.
+
+CraftChirp Creations transforms traditional handmade mud art into a premium global design product. Rooted in Indian tradition and presented with modern aesthetics, our pieces are sustainable, safe, and artistic home décor.
+
+## Key Information
+- **Materials**: Pure cow dung, fine earth clays, and natural pigments.
+- **Process**: Purification, handcrafted shaping, and natural eco-friendly sun curing.
+- **Benefits**: Eco-friendly, biodegradable, 100% non-toxic, odorless, and highly textured.
+- **Contact**: craftchirp@gmail.com
+- **Instagram**: [@craftchirp_creations](https://www.instagram.com/craftchirp_creations/)
+- **Website**: https://kushagr-tech.github.io/craftchirp/
+
+## Pages
+- [/about] - Our Story & Heritage
+- [/gallery] - Our Collections (Terracotta Mandala, Earthy Abstract, etc.)
+- [/contact] - Commissions and Contact Information
+
+For full details and a combined content view, see [llms-full.txt](/llms-full.txt).
