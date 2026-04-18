@@ -5,10 +5,21 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-const previewItems = [
-  { id: 1, title: "Terracotta Mandala", image: "/assets/gallery_placeholder_1776498616522.png" },
-  { id: 2, title: "Earthy Abstract", image: "/assets/hero_mud_art_1776498586869.png" },
-  { id: 3, title: "Rustic Geometrics", image: "/assets/gallery_placeholder_1776498616522.png" },
+import type { StaticImageData } from "next/image";
+
+import imgGallery from "../../../public/assets/gallery_placeholder_1776498616522.png";
+import imgHero from "../../../public/assets/hero_mud_art_1776498586869.png";
+
+type PreviewItem = {
+  id: number;
+  title: string;
+  image: StaticImageData;
+};
+
+const previewItems: PreviewItem[] = [
+  { id: 1, title: "Terracotta Mandala", image: imgGallery },
+  { id: 2, title: "Earthy Abstract", image: imgHero },
+  { id: 3, title: "Rustic Geometrics", image: imgGallery },
 ];
 
 export default function GalleryPreview() {

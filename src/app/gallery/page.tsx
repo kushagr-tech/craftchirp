@@ -1,19 +1,24 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+
+import imgGallery from "../../../public/assets/gallery_placeholder_1776498616522.png";
+import imgHero from "../../../public/assets/hero_mud_art_1776498586869.png";
+import imgProcess from "../../../public/assets/process_texture_1776498601479.png";
+import InstagramFeed from "@/components/sections/InstagramFeed";
 
 export const metadata = {
   title: "Gallery & Collections",
   description: "Browse our exclusive collections of premium handmade mud art.",
 };
 
-const galleryItems = [
-  { id: 1, title: "Earthy Abstract I", category: "Modern Designs", size: "24x36 inches", image: "/assets/gallery_placeholder_1776498616522.png" },
-  { id: 2, title: "Terracotta Mandala", category: "Traditional Motifs", size: "30x30 inches", image: "/assets/hero_mud_art_1776498586869.png" },
-  { id: 3, title: "Rustic Geometrics", category: "Modern Designs", size: "24x24 inches", image: "/assets/gallery_placeholder_1776498616522.png" },
-  { id: 4, title: "Organic Flow", category: "Wall Art", size: "36x48 inches", image: "/assets/process_texture_1776498601479.png" },
-  { id: 5, title: "Sacred Clay", category: "Traditional Motifs", size: "18x24 inches", image: "/assets/gallery_placeholder_1776498616522.png" },
-  { id: 6, title: "Desert Sun", category: "Custom Pieces", size: "40x40 inches", image: "/assets/hero_mud_art_1776498586869.png" },
+const galleryItems: {id: number, title: string, category: string, size: string, image: StaticImageData}[] = [
+  { id: 1, title: "Earthy Abstract I", category: "Modern Designs", size: "24x36 inches", image: imgGallery },
+  { id: 2, title: "Terracotta Mandala", category: "Traditional Motifs", size: "30x30 inches", image: imgHero },
+  { id: 3, title: "Rustic Geometrics", category: "Modern Designs", size: "24x24 inches", image: imgGallery },
+  { id: 4, title: "Organic Flow", category: "Wall Art", size: "36x48 inches", image: imgProcess },
+  { id: 5, title: "Sacred Clay", category: "Traditional Motifs", size: "18x24 inches", image: imgGallery },
+  { id: 6, title: "Desert Sun", category: "Custom Pieces", size: "40x40 inches", image: imgHero },
 ];
 
 export default function GalleryPage() {
@@ -70,6 +75,7 @@ export default function GalleryPage() {
         </div>
 
       </div>
+      <InstagramFeed />
     </div>
   );
 }

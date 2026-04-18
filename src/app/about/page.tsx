@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Leaf, Flame, Heart } from "lucide-react";
 
+import imgProcess from "../../../public/assets/process_texture_1776498601479.png";
+
 export const metadata = {
   title: "About CraftChirp",
   description: "Learn about the passion, sustainability, and traditional roots behind CraftChirp Creations.",
@@ -26,7 +28,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32">
           <div className="relative h-[60vh] rounded-sm overflow-hidden shadow-xl">
             <Image
-              src="/assets/process_texture_1776498601479.png"
+              src={imgProcess}
               alt="Artisan working on mud art"
               fill
               className="object-cover"

@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Leaf, Sparkles, ShieldCheck, Droplet } from "lucide-react";
 
+import heroImage from "../../../public/assets/hero_mud_art_1776498586869.png";
+
 export default function Hero() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -25,7 +27,7 @@ export default function Hero() {
         style={{ y, opacity }}
       >
         <Image
-          src="/assets/hero_mud_art_1776498586869.png"
+          src={heroImage}
           alt="Premium handcrafted mud art on wall"
           fill
           priority

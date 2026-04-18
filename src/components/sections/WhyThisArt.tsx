@@ -4,6 +4,8 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
+import imgGallery from "../../../public/assets/gallery_placeholder_1776498616522.png";
+
 export default function WhyThisArt() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -40,7 +42,7 @@ export default function WhyThisArt() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <Image
-                src="/assets/gallery_placeholder_1776498616522.png"
+                src={imgGallery}
                 alt="Beautiful modern handmade mud painting details"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

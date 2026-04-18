@@ -4,6 +4,8 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import imgProcess from "../../../public/assets/process_texture_1776498601479.png";
+
 const steps = [
   {
     num: "01",
@@ -57,7 +59,7 @@ export default function TheProcess() {
           <div className="w-full md:w-1/2 md:sticky md:top-32 h-[50vh] md:h-[70vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-full">
               <Image
-                src="/assets/process_texture_1776498601479.png"
+                src={imgProcess}
                 alt="Hands shaping mud art"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
