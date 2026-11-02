@@ -1,0 +1,292 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Craftchirp Original Art Catalog Feed",
+  "home_page_url": "https://craftchirp.com",
+  "feed_url": "https://craftchirp.com/feed/products.json",
+  "description": "Product catalog feed of authentic Warli and Madhubani folk art by Rachana Agarwal on purified cow-dung base.",
+  "author": {
+    "name": "Rachana Agarwal",
+    "url": "https://craftchirp.com/artists/rachana-agarwal"
+  },
+  "items": [
+    {
+      "id": "art-001",
+      "url": "https://craftchirp.com/art/rhythm-of-the-tarpa",
+      "markdown_url": "https://craftchirp.com/art/rhythm-of-the-tarpa.md",
+      "title": "Rhythm of the Tarpa",
+      "summary": "The Tarpa dance is the philosophical heart of Warli tribal culture. Men and women entwine hands and move in an infinite spiral around the Tarpa player—a wind instrument crafted from dried gourd and bamboo. The spiral mirrors the movement of the sun, the cyclical nature of seasons, and the collective heartbeat of the village after the winter harvest.",
+      "date_published": "2025-02-15T10:00:00Z",
+      "date_modified": "2025-02-15T10:00:00Z",
+      "image": "https://craftchirp.com/assets/hero_mud_art_1776498586869.png",
+      "tags": [
+        "Warli",
+        "painting",
+        "clay",
+        "terracotta",
+        "charcoal",
+        "white",
+        "living_room",
+        "foyer",
+        "study",
+        "meditation"
+      ],
+      "_craftchirp_metadata": {
+        "artist": "Rachana Agarwal",
+        "edition": "original",
+        "style": "Warli",
+        "medium": "Purified natural cow-dung base, rice paste & natural earth pigments on moisture-resistant MDF board",
+        "materials": [
+          "Purified cow-dung slurry",
+          "Fine alluvial clay",
+          "White rice pigment paste with natural acacia gum binder",
+          "High-density MDF board (8mm)",
+          "Natural protective matte beeswax sealant"
+        ],
+        "dimensions": {
+          "cm": "30x30",
+          "inches": "11.8x11.8"
+        },
+        "weightGrams": 850,
+        "status": "available",
+        "pricing": {
+          "USD": 420,
+          "EUR": 390,
+          "GBP": 330,
+          "INR": 34500
+        },
+        "hsCode": "9701.21.00",
+        "certificateId": "CC-2025-WAR-001"
+      }
+    },
+    {
+      "id": "art-002",
+      "url": "https://craftchirp.com/art/tree-of-ancestral-life",
+      "markdown_url": "https://craftchirp.com/art/tree-of-ancestral-life.md",
+      "title": "Tree of Ancestral Life",
+      "summary": "In traditional folk folklore, the sacred Mahua and Banyan trees bridge the underworld, mortal life, and the celestial sphere. In this piece, birds nest in interlocking branches while deer, monkeys, and farmers share the bounty of the shade. Painted using traditional single-hair bamboo reed brushes over sun-cured earth.",
+      "date_published": "2025-01-20T11:00:00Z",
+      "date_modified": "2025-01-20T11:00:00Z",
+      "image": "https://craftchirp.com/assets/process_texture_1776498601479.png",
+      "tags": [
+        "Warli",
+        "painting",
+        "clay",
+        "sand",
+        "charcoal",
+        "olive",
+        "living_room",
+        "bedroom",
+        "office"
+      ],
+      "_craftchirp_metadata": {
+        "artist": "Rachana Agarwal",
+        "edition": "original",
+        "style": "Warli",
+        "medium": "Purified natural cow-dung base, natural soot charcoal & terracotta pigment on moisture-resistant MDF",
+        "materials": [
+          "Purified cow-dung base",
+          "Red terracotta slip",
+          "Lampblack charcoal soot",
+          "Natural mineral white",
+          "High-density MDF board (10mm)"
+        ],
+        "dimensions": {
+          "cm": "45x60",
+          "inches": "17.7x23.6"
+        },
+        "weightGrams": 1650,
+        "status": "available",
+        "pricing": {
+          "USD": 680,
+          "EUR": 630,
+          "GBP": 540,
+          "INR": 56000
+        },
+        "hsCode": "9701.21.00",
+        "certificateId": "CC-2025-WAR-002"
+      }
+    },
+    {
+      "id": "art-003",
+      "url": "https://craftchirp.com/art/sacred-mithila-mandala",
+      "markdown_url": "https://craftchirp.com/art/sacred-mithila-mandala.md",
+      "title": "Sacred Mithila Mandala",
+      "summary": "Rooted in the ancient Madhubani tradition of northern Bihar, this mandala represents cosmic harmony and fertility. Using the Kachni (fine hatched line) and Bharni (solid pigment fill) techniques, concentric rings of sacred lotus blossoms, swimming fish, and solar rays radiate from a central sacred point.",
+      "date_published": "2024-11-10T14:30:00Z",
+      "date_modified": "2024-11-10T14:30:00Z",
+      "image": "https://craftchirp.com/assets/gallery_placeholder_1776498616522.png",
+      "tags": [
+        "Madhubani",
+        "painting",
+        "terracotta",
+        "sand",
+        "clay",
+        "ochre",
+        "study",
+        "dining",
+        "foyer",
+        "meditation"
+      ],
+      "_craftchirp_metadata": {
+        "artist": "Rachana Agarwal",
+        "edition": "original",
+        "style": "Madhubani",
+        "medium": "Natural cow-dung washed MDF with turmeric yellow, soot black, and earth ochre",
+        "materials": [
+          "Purified cow-dung wash",
+          "Turmeric root yellow extract",
+          "Indigo extract",
+          "Natural soot black",
+          "MDF board (8mm)"
+        ],
+        "dimensions": {
+          "cm": "40x40",
+          "inches": "15.7x15.7"
+        },
+        "weightGrams": 1100,
+        "status": "available",
+        "pricing": {
+          "USD": 550,
+          "EUR": 510,
+          "GBP": 435,
+          "INR": 45000
+        },
+        "hsCode": "9701.21.00",
+        "certificateId": "CC-2024-MAD-001"
+      }
+    },
+    {
+      "id": "art-004",
+      "url": "https://craftchirp.com/art/harvest-celebration-monochrome",
+      "markdown_url": "https://craftchirp.com/art/harvest-celebration-monochrome.md",
+      "title": "Harvest Celebration Monochrome",
+      "summary": "A panoramic narrative of agricultural life in tribal Maharashtra. From the winnowing of grain to bullock carts returning under the crescent moon, this large-format painting captures community interconnectedness with rhythmic geometric repetition.",
+      "date_published": "2025-03-01T09:00:00Z",
+      "date_modified": "2025-03-01T09:00:00Z",
+      "image": "https://craftchirp.com/assets/hero_mud_art_1776498586869.png",
+      "tags": [
+        "Warli",
+        "painting",
+        "charcoal",
+        "clay",
+        "sand",
+        "white",
+        "living_room",
+        "boardroom",
+        "gallery"
+      ],
+      "_craftchirp_metadata": {
+        "artist": "Rachana Agarwal",
+        "edition": "original",
+        "style": "Warli",
+        "medium": "Purified sun-dried cow dung base and white rice flour pigment on solid MDF board",
+        "materials": [
+          "Purified cow-dung base",
+          "Alluvial clay",
+          "Rice flour paste with plant gum",
+          "Solid MDF board (12mm)"
+        ],
+        "dimensions": {
+          "cm": "60x60",
+          "inches": "23.6x23.6"
+        },
+        "weightGrams": 2400,
+        "status": "available",
+        "pricing": {
+          "USD": 850,
+          "EUR": 790,
+          "GBP": 675,
+          "INR": 70000
+        },
+        "hsCode": "9701.21.00",
+        "certificateId": "CC-2025-WAR-003"
+      }
+    },
+    {
+      "id": "art-005",
+      "url": "https://craftchirp.com/art/terracotta-folk-sun-necklace",
+      "markdown_url": "https://craftchirp.com/art/terracotta-folk-sun-necklace.md",
+      "title": "Terracotta Folk Sun Pendant Necklace",
+      "summary": "Hand-molded from natural terracotta clay and kiln-fired using traditional slow wood smoke. The centerpiece pendant depicts an ancient folk sun motif, suspended on an adjustable braided organic cotton cord with hand-rolled natural clay beads.",
+      "date_published": "2025-02-10T12:00:00Z",
+      "date_modified": "2025-02-10T12:00:00Z",
+      "image": "https://craftchirp.com/assets/gallery_placeholder_1776498616522.png",
+      "tags": [
+        "Folk-Contemporary",
+        "jewellery",
+        "terracotta",
+        "clay",
+        "charcoal"
+      ],
+      "_craftchirp_metadata": {
+        "artist": "Rachana Agarwal",
+        "edition": "limited_edition",
+        "style": "Folk-Contemporary",
+        "medium": "Handcrafted kiln-fired terracotta clay with natural earth pigments on braided organic cotton",
+        "materials": [
+          "Natural terracotta clay",
+          "Organic braided cotton cord",
+          "Natural mineral pigments",
+          "Wax finish"
+        ],
+        "dimensions": {
+          "cm": "5x6",
+          "inches": "2x2.4"
+        },
+        "weightGrams": 45,
+        "status": "available",
+        "pricing": {
+          "USD": 95,
+          "EUR": 88,
+          "GBP": 75,
+          "INR": 7800
+        },
+        "hsCode": "7117.90.90",
+        "certificateId": "CC-2025-JWL-001"
+      }
+    },
+    {
+      "id": "art-006",
+      "url": "https://craftchirp.com/art/warli-miniature-bird-earrings",
+      "markdown_url": "https://craftchirp.com/art/warli-miniature-bird-earrings.md",
+      "title": "Warli Miniature Bird Clay Earrings",
+      "summary": "Feather-light discs of hand-kneaded natural clay, hand-painted with miniature Warli flying birds using fine bamboo needles. Mounted on verified hypoallergenic surgical steel posts.",
+      "date_published": "2025-02-12T15:00:00Z",
+      "date_modified": "2025-02-12T15:00:00Z",
+      "image": "https://craftchirp.com/assets/process_texture_1776498601479.png",
+      "tags": [
+        "Warli",
+        "jewellery",
+        "terracotta",
+        "white",
+        "clay"
+      ],
+      "_craftchirp_metadata": {
+        "artist": "Rachana Agarwal",
+        "edition": "limited_edition",
+        "style": "Warli",
+        "medium": "Hand-sculpted clay with hypoallergenic surgical steel findings",
+        "materials": [
+          "Refined riverbed clay",
+          "Hypoallergenic 316L surgical stainless steel hooks",
+          "Natural mineral white pigment",
+          "Non-toxic organic sealant"
+        ],
+        "dimensions": {
+          "cm": "2.5x4.5",
+          "inches": "1x1.8"
+        },
+        "weightGrams": 14,
+        "status": "available",
+        "pricing": {
+          "USD": 65,
+          "EUR": 60,
+          "GBP": 52,
+          "INR": 5400
+        },
+        "hsCode": "7117.90.90",
+        "certificateId": "CC-2025-JWL-002"
+      }
+    }
+  ]
+}

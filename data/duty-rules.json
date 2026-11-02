@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": {
+    "version": "2026.2",
+    "lastVerified": "2026-10-31",
+    "verifiedBy": "Craftchirp Global Trade Compliance & Architecture"
+  },
+  "countries": {
+    "US": {
+      "name": "United States",
+      "currency": "USD",
+      "dutyModel": "DDP",
+      "deMinimisSuspended": true,
+      "deMinimisNotes": "U.S. Customs and Border Protection (CBP) indefinite suspension of Section 321 administrative de minimis for commercial air entries. All commercial packages require customs entry filing.",
+      "hsRules": {
+        "9701": {
+          "description": "Original paintings, drawings and pastels executed entirely by hand",
+          "dutyRatePercent": 0.0,
+          "entryProcessingFeeUsd": 2.22,
+          "notes": "Duty-free under HTS Chapter 97; subject to informal entry filing fee."
+        },
+        "7117": {
+          "description": "Handmade clay / imitation jewellery",
+          "dutyRatePercent": 5.0,
+          "entryProcessingFeeUsd": 2.22,
+          "notes": "Standard Normal Trade Relations tariff (5.0%) plus entry processing fee."
+        }
+      },
+      "vatRatePercent": 0.0
+    },
+    "DE": {
+      "name": "Germany",
+      "currency": "EUR",
+      "dutyModel": "DDP",
+      "isEuMember": true,
+      "councilRegulation": "Council Regulation (EU) 2026/382",
+      "effectiveDate": "2026-07-01",
+      "lowValueThresholdEur": 150.0,
+      "interimFlatDutyEur": 3.0,
+      "vatRatePercent": 19.0,
+      "hsRules": {
+        "9701": {
+          "dutyRateAboveThresholdPercent": 0.0,
+          "notes": "Items <= €150 incur €3 interim duty; items > €150 enter at 0% fine art duty plus 19% import VAT."
+        },
+        "7117": {
+          "dutyRateAboveThresholdPercent": 4.0,
+          "notes": "Items <= €150 incur €3 interim duty; items > €150 incur 4% duty plus 19% import VAT."
+        }
+      }
+    },
+    "FR": {
+      "name": "France",
+      "currency": "EUR",
+      "dutyModel": "DDP",
+      "isEuMember": true,
+      "councilRegulation": "Council Regulation (EU) 2026/382",
+      "effectiveDate": "2026-07-01",
+      "lowValueThresholdEur": 150.0,
+      "interimFlatDutyEur": 3.0,
+      "vatRatePercent": 20.0,
+      "hsRules": {
+        "9701": {
+          "dutyRateAboveThresholdPercent": 0.0,
+          "notes": "Original art under HTS 9701 enters duty-free above €150 threshold."
+        },
+        "7117": {
+          "dutyRateAboveThresholdPercent": 4.0
+        }
+      }
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "currency": "GBP",
+      "dutyModel": "DDP",
+      "vatRatePercent": 20.0,
+      "lowValueThresholdGbp": 135.0,
+      "hsRules": {
+        "9701": {
+          "dutyRatePercent": 0.0,
+          "notes": "Duty-free under Chapter 97. 20% import VAT applies."
+        },
+        "7117": {
+          "dutyRatePercent": 4.0,
+          "notes": "4% customs duty plus 20% import VAT."
+        }
+      }
+    },
+    "IN": {
+      "name": "India (Domestic)",
+      "currency": "INR",
+      "dutyModel": "DDP",
+      "isDomestic": true,
+      "gstRatePercent": 12.0,
+      "customsDutyPercent": 0.0,
+      "notes": "Domestic handmade art and handicraft supply taxed at 12% GST."
+    },
+    "RU": {
+      "name": "Russian Federation",
+      "currency": "RUB",
+      "checkoutDisabled": true,
+      "inquiryOnly": true,
+      "complianceNote": "Automated cross-border e-commerce checkout to Russia is suspended in accordance with international payment network and carrier compliance. Private inquiries are routed to studio management."
+    }
+  }
+}
+

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { Leaf, Flame, Heart } from "lucide-react";
 
@@ -61,6 +62,21 @@ export default function AboutPage() {
                 <h4 className="font-serif font-bold text-[#2d2a26] mb-1">Handcrafted</h4>
                 <p className="text-sm text-gray-500">Every piece touched by human hands.</p>
               </div>
+            </div>
+
+            <div className="pt-8 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/artists/rachana-agarwal"
+                className="px-6 py-3 bg-brand-clay text-white uppercase tracking-widest text-xs font-semibold rounded-xs hover:bg-brand-terracotta transition-colors text-center shadow-sm"
+              >
+                Meet Founder Rachana Agarwal →
+              </Link>
+              <Link
+                href="/gallery"
+                className="px-6 py-3 border border-brand-sand text-[#2d2a26] uppercase tracking-widest text-xs font-semibold rounded-xs hover:bg-brand-sand/20 transition-colors text-center"
+              >
+                Explore Original Artworks
+              </Link>
             </div>
           </div>
         </div>

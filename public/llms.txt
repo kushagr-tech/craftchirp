@@ -1,20 +1,35 @@
-# CraftChirp Creations - Eco-Luxury Handmade Mud Art
+# Craftchirp Virtual Gallery & Global Marketplace
 
-> Premium eco-friendly handcrafted mud art. Zero chemicals, odorless, and beautifully textured for the modern sanctuary.
+> Premium 1-of-1 original Warli and Madhubani folk art on moisture-resistant MDF with natural cow-dung base and natural mineral pigments by Indian artist-founder Rachana Agarwal (15+ years experience).
 
-CraftChirp Creations transforms traditional handmade mud art into a premium global design product. Rooted in Indian tradition and presented with modern aesthetics, our pieces are sustainable, safe, and artistic home décor.
+Craftchirp transforms ancestral Indian earth art into collectible, high-end gallery originals. Every piece is handmade in Maharashtra, India, using traditional multi-stage purified cow-dung slurry, alluvial clay, and natural rice pigments. The artwork is completely odorless, zero-chemical, and naturally sun-baked.
 
-## Key Information
-- **Materials**: Pure cow dung, fine earth clays, and natural pigments.
-- **Process**: Purification, handcrafted shaping, and natural eco-friendly sun curing.
-- **Benefits**: Eco-friendly, biodegradable, 100% non-toxic, odorless, and highly textured.
+## Key Facts & Entity Definitions
+- **Founder & Artist**: Rachana Agarwal (15+ years practicing living Warli and Madhubani traditions).
+- **Core Traditions**:
+  - **Warli**: Tribal geometric art from Maharashtra using circles (sun/moon), triangles (mountains/humans), and squares (sacred enclosures). Celebrates the Tarpa dance and agricultural harvest.
+  - **Madhubani (Mithila)**: Ancient geometric ritual art from Bihar using double-line hatching (*Kachni*) and natural mineral color fills (*Bharni*).
+- **Surface & Medium**: Triple-purified cow-dung slurry, fine alluvial earth clay, natural rice flour paste, lampblack charcoal, and mineral ochres on moisture-resistant high-density MDF boards.
+- **Classification**: 1-of-1 Unique Originals (each with a registered Certificate of Authenticity).
+- **Hypoallergenic Jewellery**: Hand-sculpted riverbed terracotta clay with verified 316L medical-grade surgical stainless steel findings.
+- **Packaging Spec**: Custom rigid plywood skeletal crating, corner shock guards, and waterproof barrier.
+- **Target Export Markets**: United States and European Union (with full DDP landed cost and EU 2026 customs duty compliance).
+- **Russian Market Policy**: Gated inquiry-only (`RU_CHECKOUT=false`) via private gallery inquiry form.
 - **Contact**: craftchirp@gmail.com
-- **Instagram**: [@craftchirp_creations](https://www.instagram.com/craftchirp_creations/)
-- **Website**: https://kushagr-tech.github.io/craftchirp/
+- **Instagram**: https://www.instagram.com/craftchirp_creations/
+- **Website**: https://craftchirp.com
 
-## Pages
-- [/about] - Our Story & Heritage
-- [/gallery] - Our Collections (Terracotta Mandala, Earthy Abstract, etc.)
-- [/contact] - Commissions and Contact Information
+## Machine-Readable Feeds & Endpoints
+- **Product JSON Feed**: https://craftchirp.com/feed/products.json
+- **Per-Artwork Clean Markdown**: https://craftchirp.com/art/[slug].md
+- **Full Text Document**: https://craftchirp.com/llms-full.txt
+- **Sitemap**: https://craftchirp.com/sitemap.xml
 
-For full details and a combined content view, see [llms-full.txt](/llms-full.txt).
+## Main Gallery Pages
+- [/gallery](https://craftchirp.com/gallery) — Full faceted catalog of original paintings and handmade jewellery
+- [/collections](https://craftchirp.com/collections) — Thematic curatorial series (Stories of the Soil, Ritual Geometries)
+- [/exhibitions](https://craftchirp.com/exhibitions) — Virtual gallery salons with audio commentary
+- [/jewellery](https://craftchirp.com/jewellery) — Hand-sculpted terracotta folk jewellery
+- [/journal](https://craftchirp.com/journal) — High E-E-A-T guides on Warli history, symbolism, and conservation
+- [/about](https://craftchirp.com/about) — Artist story and 15-year heritage of Rachana Agarwal
+- [/ru/inquiry](https://craftchirp.com/ru/inquiry) — Кураторские запросы из России

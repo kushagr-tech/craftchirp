@@ -6,17 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:inventory": "tsc src/lib/inventory/__tests__/reservation.test.ts src/lib/inventory/reservation-manager.ts --outDir /tmp/test-build --module commonjs --target es2020 --esModuleInterop && node /tmp/test-build/lib/inventory/__tests__/reservation.test.js",
+    "test:landed-cost": "tsc src/lib/commerce/__tests__/landed-cost.test.ts src/lib/commerce/landed-cost.ts --outDir /tmp/test-build --module commonjs --target es2020 --esModuleInterop --resolveJsonModule && node /tmp/test-build/src/lib/commerce/__tests__/landed-cost.test.js",
+    "test:e2e": "tsc src/lib/__tests__/e2e-marketplace-flow.test.ts src/lib/inventory/reservation-manager.ts src/lib/commerce/landed-cost.ts src/lib/commerce/certificate-generator.ts src/data/catalogue.ts src/data/journal.ts --outDir /tmp/test-build --module commonjs --target es2020 --esModuleInterop --resolveJsonModule && node /tmp/test-build/src/lib/__tests__/e2e-marketplace-flow.test.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "drizzle-orm": "^0.45.4",
     "framer-motion": "^12.38.0",
     "lenis": "^1.3.23",
     "lucide-react": "^1.8.0",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.5.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

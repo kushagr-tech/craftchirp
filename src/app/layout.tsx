@@ -4,6 +4,8 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { SiteJsonLd } from "@/components/seo/JsonLd";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,14 +44,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} h-full antialiased relative`}
     >
-      <body className="min-h-full flex flex-col bg-brand-offwhite text-foreground selection:bg-brand-clay selection:text-white">
+      <body className="relative min-h-full flex flex-col bg-brand-offwhite text-foreground selection:bg-brand-clay selection:text-white">
+        <SiteJsonLd />
         <SmoothScroll>
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main className="relative flex-grow">{children}</main>
           <Footer />
         </SmoothScroll>
+        <CookieConsent />
       </body>
     </html>
   );

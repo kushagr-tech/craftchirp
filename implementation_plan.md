@@ -1,66 +1,76 @@
-# CraftChirp Creations Website Implementation Plan
+# Craftchirp Virtual Gallery + Global Marketplace Implementation Plan
 
-This document outlines the proposed architecture, tech stack, and execution plan for the CraftChirp Creations digital art gallery.
+This master plan governs the evolution of Craftchirp into a high-performance virtual art gallery and global e-commerce marketplace for solo Indian folk artist Rachana Agarwal.
 
-## Goal Description
+---
 
-Build a premium, visually-strong, high-performance, frontend-only digital art gallery for CraftChirp Creations. The website will highlight eco-luxury handmade mud art using natural materials and cow dung. The presentation will emulate a modern, high-end art exhibition using visual storytelling and smooth animations. 
+## 1. Executive Summary & Architecture Strategy
 
-## Proposed Architecture & Tech Stack
+- **Core Founder**: Rachana Agarwal (Craftchirp) — 15+ years creating Warli and Madhubani-inspired folk art on MDF boards with natural cow-dung bases and earth pigments. Non-technical founder who must manage artworks, photography, pricing, and orders independently.
+- **Tech Stack**: Next.js 16 (App Router), React 19, Tailwind CSS v4, Framer Motion, React Lenis, TypeScript, Postgres (Neon/Supabase) with Drizzle ORM.
+- **Brand Tokens**: Clay `#8c5a45`, Terracotta `#e07a5f`, Sand `#d9c5b2`, Off-white `#f4f1de`, Sage `#818c78`, Charcoal `#2d2a26`.
+- **Target Markets**: United States and European Union as primary checkout markets; Russia as a gated, inquiry-only market (`RU_CHECKOUT=false`).
+- **Core Principles**:
+  - One-of-a-kind inventory protection via atomic reservation holds.
+  - Transparent landed-cost engine respecting EU 2026 customs reforms and US entry rules.
+  - Zero fake/AI imagery on production product pages; dev placeholders clearly flagged.
+  - Dual Schema.org emission (`VisualArtwork` + `Product`) for rich search and LLM discovery.
 
-*   **Framework:** Next.js (App Router)
-*   **Styling:** Tailwind CSS
-*   **Animations:** Framer Motion (for staggered grid reveals, fades, scroll-triggered animations) & Lenis (for premium smooth scrolling across the entire site)
-*   **Icons:** Lucide React
-*   **Fonts:** Inter & a premium serif font like Playfair Display (for high-end elegance)
-*   **Deployment Target:** Frontend-only (Static export or standard Next.js deployment)
+---
 
-## Proposed Changes
+## 2. Phase Breakdown & Execution Sequence
 
-### 1. Global Setup
-*   Initialize Next.js project with App Router and Tailwind CSS.
-*   Configure color palette in `tailwind.config.ts`:
-    *   Clay brown (`#8c5a45`)
-    *   Terracotta (`#e07a5f`)
-    *   Sand / beige (`#d9c5b2`)
-    *   Off-white (`#f4f1de`)
-    *   Olive / sage green (`#818c78`)
-*   Setup global CSS and typography.
-*   Configure Lenis smooth scrolling provider to wrap the application.
+```
+Phase 0: Decisions & Research (ADRs, REA competitor patterns, UI shortlist)  <-- [COMPLETED - AT GATE]
+    │
+    ▼ [GATE: Owner approves DECISIONS.md]
+Phase 1: Foundation (Data schemas, atomic reservation engine, layout, image pipeline)
+    │
+    ▼
+Phase 2: Catalogue & Discovery (/gallery faceted filters, /art/[slug] museum PDP, collections)
+    │
+    ▼
+Phase 3: Virtual Gallery (/exhibitions/[slug], "See it on your wall" scale tool)
+    │
+    ▼
+Phase 4: Commerce & Checkout (Cart, landed-cost engine, multi-currency, PDF CoA, admin)
+    │
+    ▼ [GATE: Test-mode payments verified; owner approves before live keys]
+Phase 5: Organic Discovery (Metadata API, JSON-LD, sitemap, hreflang, /journal, LLM layers)
+    │
+    ▼
+Phase 6: Trust & Compliance (Policy pages, claims audit, docs/OWNER-CHECKLIST.md)
+    │
+    ▼
+Phase 7: QA, E2E Testing & Launch (Playwright, accessibility, runbook, walkthrough)
+```
 
-### 2. Layout & Components (`src/components/`)
-*   [NEW] `Layout/Header.tsx`: Minimal modern sticky/transparent navigation bar.
-*   [NEW] `Layout/Footer.tsx`: Simple footer with contact/socials.
-*   [NEW] `UI/Section.tsx`: Reusable container with padding and animation wrappers.
-*   [NEW] `UI/Lightbox.tsx`: Custom Framer Motion powered lightbox for viewing artwork in high resolution.
-*   [NEW] `UI/SmoothScroll.tsx`: Wrapper utilizing Lenis.
+---
 
-### 3. Homepage Sections (`src/components/sections/`)
-*   [NEW] `Hero.tsx`: Full-screen hero section. Headline: "Art Born from Earth". Large immersive background image with parallax effect, trust signal badges (Natural, Sustainable, Handmade, Odor-Free).
-*   [NEW] `WhyThisArt.tsx`: Visual storytelling showcasing eco-friendly, zero-chemical, odorless, and durable qualities.
-*   [NEW] `TheProcess.tsx`: Scroll-based storytelling of the process (Raw materials, Preparation, Crafting, Drying, Final artwork).
-*   [NEW] `GalleryPreview.tsx`: Glimpse into the collections with hover zoom/glow effects.
-*   [NEW] `InstagramFeed.tsx`: Curated fake feed layout for Instagram.
+## 3. Phase 0 Deliverables Summary
 
-### 4. Pages Structure (`src/app/`)
-*   [NEW] `page.tsx`: Composes all the homepage sections sequentially.
-*   [NEW] `gallery/page.tsx`: Masonry layout for gallery items with filtering and Lightbox integration.
-*   [NEW] `about/page.tsx`: Contains the story, passion, and cultural roots of CraftChirp.
-*   [NEW] `contact/page.tsx`: Minimal contact form and commission inquiries layout.
+1. **Competitor & Market Research** (`docs/research/patterns.md`):
+   - In-depth pattern analysis across Mojarto, Saatchi Art, Artfinder, Singulart, Jaypore, and Etsy.
+   - Evidence-based guidelines for IA, multi-faceted filtering, museum-label blocks, and trust markers.
+2. **Architecture Decision Records** (`docs/DECISIONS.md`):
+   - **ADR-001**: Custom-Lite e-commerce engine using Next.js App Router + Postgres + Drizzle ORM for atomic 1/1 inventory holds and full control over landed costs.
+   - **ADR-002**: Cross-border payments strategy using a typed `PaymentProvider` interface; verified Indian export requirements (IEC, RBI purpose codes, FIRC/e-FIRA, customer address capture).
+   - **ADR-003**: Headless CMS / protected `/admin` tailored for Rachana Agarwal.
+   - **ADR-004**: Staged hosting transition from GitHub Pages export to Vercel with custom domain.
+   - **ADR-005**: Gated Russian market compliance (`RU_CHECKOUT=false`).
+   - **ADR-006**: Strict adherence to the 6 brand color tokens and "museum-label restraint" design philosophy.
+3. **UI Component Shortlist** (`docs/ui-shortlist.md`):
+   - 12 accessible, Tailwind v4-ready building blocks from 21st.dev.
+4. **Scoped Sub-Prompt** (`docs/prompts/phase-0-decisions-and-research.md`):
+   - Strict boundaries, do-not-touch lists, and completion criteria.
 
-## Open Questions
+---
 
-> [!IMPORTANT]
-> - Do you have the specific high-resolution images required right now, or should I generate premium AI placeholders (using Midjourney/DALL-E style prompts via `generate_image`) that fit the described aesthetics for the time being?
-> - Would you prefer a standard server-side rendering setup for Next.js, or a static HTML export (`output: export`)? This depends on your preferred hosting (Vercel vs. GitHub Pages/S3).
+## 4. Gate Verification & Clarifying Questions for the Owner
 
-## Verification Plan
+To proceed through the Phase 0 Gate into **Phase 1: Foundation**, the owner must review and approve `docs/DECISIONS.md`. 
 
-### Automated Checks
-*   Verify application compiles with zero warnings `npm run build`.
-*   Ensure Lighthouse score tests pass for Performance and SEO.
-
-### Manual Verification
-*   Test responsive design across simulated mobile, tablet, and desktop viewports.
-*   Verify framer-motion animations trigger smoothly on scroll.
-*   Check that Lenis scrolling provides a premium 60fps feel without jank.
+The following 3 clarifying questions require owner confirmation:
+1. **Custom Domain & Target Hosting**: What is the final custom domain planned for the marketplace (e.g., `craftchirp.com`), and do you have a preferred hosting account (e.g., Vercel)?
+2. **Product Taxonomy Scope**: Beyond original folk art paintings on MDF and handmade clay/terracotta jewellery, are there any other specific product lines (e.g., hand-painted wooden platters, wall plates, bookmarks) planned for the initial launch catalog?
+3. **Artist Model**: Will Rachana Agarwal remain the sole artist-founder on the platform for the foreseeable future, or should the artist attribution schema be pre-wired to support additional collaborating rural artisans immediately?

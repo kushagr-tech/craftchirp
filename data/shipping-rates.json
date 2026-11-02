@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "version": "2026.1",
+    "origin": "Maharashtra, India",
+    "dimensionalDivisor": 5000,
+    "packagingSpec": {
+      "mdfArt": "High-density corner guards, anti-scratch foam wrap, moisture-barrier polyethylene membrane, rigid plywood skeletal crating.",
+      "jewellery": "Individual velvet-lined cotton pouch, rigid kraft presentation box, shock-absorbing outer mailer."
+    }
+  },
+  "zones": {
+    "US": {
+      "name": "North America (United States)",
+      "carrier": "DHL Express / FedEx Priority",
+      "currency": "USD",
+      "baseWeightKg": 1.0,
+      "baseRate": 45.0,
+      "additionalHalfKgRate": 12.0,
+      "insurancePercent": 1.5,
+      "transitDaysMin": 5,
+      "transitDaysMax": 8
+    },
+    "EU": {
+      "name": "European Union (Germany, France, etc.)",
+      "carrier": "DHL Express Worldwide",
+      "currency": "EUR",
+      "baseWeightKg": 1.0,
+      "baseRate": 42.0,
+      "additionalHalfKgRate": 10.0,
+      "insurancePercent": 1.5,
+      "transitDaysMin": 5,
+      "transitDaysMax": 9
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "carrier": "DHL Express Worldwide",
+      "currency": "GBP",
+      "baseWeightKg": 1.0,
+      "baseRate": 38.0,
+      "additionalHalfKgRate": 9.0,
+      "insurancePercent": 1.5,
+      "transitDaysMin": 4,
+      "transitDaysMax": 7
+    },
+    "IN": {
+      "name": "India (Domestic)",
+      "carrier": "BlueDart / DTDC Express",
+      "currency": "INR",
+      "baseWeightKg": 1.0,
+      "baseRate": 450.0,
+      "additionalHalfKgRate": 150.0,
+      "insurancePercent": 1.0,
+      "transitDaysMin": 2,
+      "transitDaysMax": 5
+    },
+    "ROW": {
+      "name": "Rest of World",
+      "carrier": "DHL Express Worldwide",
+      "currency": "USD",
+      "baseWeightKg": 1.0,
+      "baseRate": 55.0,
+      "additionalHalfKgRate": 15.0,
+      "insurancePercent": 2.0,
+      "transitDaysMin": 7,
+      "transitDaysMax": 14
+    }
+  }
+}
+

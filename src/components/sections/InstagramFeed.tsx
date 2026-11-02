@@ -1,8 +1,11 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import imgGallery from "../../../public/assets/gallery_placeholder_1776498616522.png";
+import imgProcess from "../../../public/assets/process_texture_1776498601479.png";
+import imgHero from "../../../public/assets/hero_mud_art_1776498586869.png";
 
 const InstagramIcon = ({ size = 24, className = "" }) => (
   <svg 
@@ -25,18 +28,13 @@ const InstagramIcon = ({ size = 24, className = "" }) => (
 
 interface IGPost {
   id: string;
-  image: string;
+  image: string | StaticImageData;
   link: string;
 }
 
 export default function InstagramFeed() {
   const [posts, setPosts] = useState<IGPost[]>([]);
   const [loading, setLoading] = useState(true);
-
-  // Import static fallbacks in case API isn't configured
-  const imgGallery = require("../../../public/assets/gallery_placeholder_1776498616522.png");
-  const imgProcess = require("../../../public/assets/process_texture_1776498601479.png");
-  const imgHero = require("../../../public/assets/hero_mud_art_1776498586869.png");
 
   useEffect(() => {
     async function fetchInstagram() {
@@ -97,7 +95,7 @@ export default function InstagramFeed() {
     }
 
     fetchInstagram();
-  }, [imgGallery, imgHero, imgProcess]);
+  }, []);
 
   return (
     <section className="py-24 bg-brand-sand text-[#2d2a26] overflow-hidden">

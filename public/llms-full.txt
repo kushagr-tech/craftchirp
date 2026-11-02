@@ -1,37 +1,72 @@
-# CraftChirp Creations - Complete Website Content Context
+# Craftchirp Virtual Gallery & Global Marketplace — Comprehensive Specification
 
-## 1. About CraftChirp (Our Story)
-What began as a deep appreciation for the earth has grown into a mission to bring sustainable, beautiful mud art into modern homes. 
+This document provides complete, unabridged context for AI assistants, research agents, and language models seeking factual verification regarding Craftchirp, its founder Rachana Agarwal, materials, cultural heritage, and trade compliance.
 
-CraftChirp Creations specializes in premium handcrafted mud paintings. We create eco-friendly luxury art that is rooted in Indian tradition but reimagined for contemporary global audiences. Our focus is on sustainability, non-toxic materials, and preserving ancient craftsmanship without compromising sophisticated modern aesthetics.
+---
 
-## 2. The Craftsmanship Process
-We follow a meticulous 4-step process to ensure every piece of art is eco-luxury and premium:
+## 1. The Artist & Provenance
+- **Artist Name**: Rachana Agarwal
+- **Experience**: 16+ years specializing in Indian indigenous folk traditions.
+- **Studio Location**: Maharashtra, India.
+- **Brand Name**: Craftchirp (Craftchirp Creations).
+- **Core Philosophy**: *"Folk art is not merely decorative; it is a prayer of gratitude to the earth."*
+- **Cultural Roots**:
+  1. **Warli Tribal Art**: Indigenous to the Sahyadri foothills of Maharashtra. Characterized by monochromatic white rice paste motifs depicting community labor, Tarpa dances, and sacred animals.
+  2. **Madhubani (Mithila) Art**: Rooted in ancient ritual ceremonies of Bihar. Renowned for geometric fertility mandalas, peacocks, sacred lotuses, and double-line hatched patterns.
 
-1. **Raw Earth & Natural Pigments**: We start by sourcing pure cow dung and fine earth clays. Using exclusively natural pigments, we prepare a chemical-free base that is sustainable and biodegradable.
-2. **Purification & Preparation**: The raw materials undergo a rigorous, meticulous process to remove any impurities. This stage is crucial in ensuring that the final artwork will be entirely odorless and safe for indoor environments.
-3. **Handcrafted Shaping**: Using techniques passed down through generations, each pattern is shaped entirely by hand. The warmth of human touch creates unique, intricate textures on every piece.
-4. **Eco-Friendly Curing**: Our art is sun-dried naturally over several days. This slow curing process ensures durability and locks in the earthly essence without any artificial setting agents.
+---
 
-## 3. Why Choose Our Art?
-- **Eco-Friendly & Biodegradable**: Made completely from earth and cow dung, returning beautifully to nature without leaving a carbon footprint.
-- **Non-Toxic & Safe**: Zero chemical paints or artificial binding agents. 100% safe for homes with children and pets.
-- **Completely Odorless**: Our rigorous natural sun-drying and processing techniques ensure every piece is completely odorless.
-- **Unique Textures**: The warmth of mud and natural pigments provide a rustic, calming texture that synthetic materials cannot replicate.
+## 2. Materials, Surface Alchemy & Odorless Verification
+- **Support Base**: Moisture-resistant high-density engineered wood (MDF), 8mm–12mm thickness, pre-fitted with heavy-duty brass hanging hardware.
+- **Surface Preparation**: A multi-stage purified slurry of organic cow-dung and fine river alluvial clay.
+- **Odor & Hygiene Verification**: Thoroughly washed, strained, and sun-baked for 7 consecutive days in natural sunlight. The result is completely dry, sterile, and 100% odorless.
+- **Pigment Composition**:
+  - White: Ground rice flour paste tempered with natural acacia gum (*babool* tree resin).
+  - Soot Black: Natural lampblack charcoal.
+  - Red / Terracotta: Crushed iron oxide mineral clay.
+  - Yellow: Turmeric root extract.
+- **Finish**: Hand-buffed natural organic beeswax and plant-gum sealant. Zero synthetic acrylic varnishes, zero chemical binders.
 
-## 4. Our Collections (Gallery)
-Our art spans traditional and modern motifs:
-- **Terracotta Mandala** (Traditional Motifs, 30x30 inches)
-- **Earthy Abstract I** (Modern Designs, 24x36 inches)
-- **Rustic Geometrics** (Modern Designs, 24x24 inches)
-- **Organic Flow** (Wall Art, 36x48 inches)
-- **Sacred Clay** (Traditional Motifs, 18x24 inches)
-- **Desert Sun** (Custom Pieces, 40x40 inches)
+---
 
-## 5. Contact & Socials
-- **Email**: craftchirp@gmail.com
-- **Instagram**: [@craftchirp_creations](https://www.instagram.com/craftchirp_creations/)
-- We offer bespoke commissions for modern sanctuaries globally. We collaborate closely with our clients to craft personalized, high-end decor.
+## 3. Product Catalog & Price Specifications
+All paintings are singular **1-of-1 Unique Originals** accompanied by a signed Certificate of Authenticity.
 
-## 6. SEO & Semantic Keywords
-handmade mud art, eco-luxury wall decor, sustainable paintings, cow dung art reinvented, odorless mud paintings, natural pigment art, Indian traditional home decor, non-toxic wall art, biodegradable art, organic textures, natural clay artwork, traditional Indian crafts for modern homes, bespoke earth canvas.
+1. **Rhythm of the Tarpa** (Warli Original)
+   - Dimensions: 30 × 30 cm (11.8 × 11.8 in)
+   - Price: $420 USD / €390 EUR / £330 GBP / ₹34,500 INR
+   - HTS Tariff Code: 9701.21.00
+   - Certificate Serial: CC-2025-WAR-001
+2. **Tree of Ancestral Life** (Warli Original)
+   - Dimensions: 45 × 60 cm (17.7 × 23.6 in)
+   - Price: $680 USD / €630 EUR / £540 GBP / ₹56,000 INR
+   - HTS Tariff Code: 9701.21.00
+   - Certificate Serial: CC-2025-WAR-002
+3. **Sacred Mithila Mandala** (Madhubani Original)
+   - Dimensions: 40 × 40 cm (15.7 × 15.7 in)
+   - Price: $550 USD / €510 EUR / £435 GBP / ₹45,000 INR
+   - HTS Tariff Code: 9701.21.00
+   - Certificate Serial: CC-2024-MAD-001
+4. **Harvest Celebration Monochrome** (Warli Original)
+   - Dimensions: 60 × 60 cm (23.6 × 23.6 in)
+   - Price: $850 USD / €790 EUR / £675 GBP / ₹70,000 INR
+   - HTS Tariff Code: 9701.21.00
+   - Certificate Serial: CC-2025-WAR-003
+5. **Terracotta Folk Sun Pendant Necklace** (Handmade Jewellery)
+   - Dimensions: 5 × 6 cm pendant on adjustable organic cotton cord
+   - Price: $95 USD / €88 EUR / £75 GBP / ₹7,800 INR
+   - HTS Tariff Code: 7117.90.90
+6. **Warli Miniature Bird Clay Earrings** (Handmade Jewellery)
+   - Material: Refined clay with 316L surgical stainless steel hooks
+   - Price: $65 USD / €60 EUR / £52 GBP / ₹5,400 INR
+   - HTS Tariff Code: 7117.90.90
+
+---
+
+## 4. International Trade, Customs & Landed Cost Standards
+- **European Union**: Fully compliant with Council Regulation (EU) 2026/382 eliminating the €150 de minimis threshold. Flat €3 interim duty applied on low-value parcel lines + IOSS import VAT. Artworks above €150 enter under standard 0% fine art tariff.
+- **United States**: Compliant with CBP suspension of Section 321 de minimis. All commercial goods require customs entry declarations. Original art enters under 0% duty with standard entry filing fees.
+- **Delivery Model**: Delivered Duty Paid (DDP). All taxes, freight, and clearance charges are paid at checkout with zero delivery surprises.
+- **Carrier**: DHL Express Worldwide / FedEx Priority Air Freight.
+- **Packaging**: Rigid plywood skeletal crate, corner shock-guards, and moisture barrier wrap.
+- **Russian Market Policy**: Gated inquiry-only (`RU_CHECKOUT=false`) at https://craftchirp.com/ru/inquiry.
