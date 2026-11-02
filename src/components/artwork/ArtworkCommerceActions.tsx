@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Artwork, CurrencyCode } from "@/types/models";
 import { CartStore } from "@/lib/commerce/cart-store";
+import { AdminStore } from "@/lib/admin/admin-store";
 import { InquiryModal } from "./InquiryModal";
 import { WallVisualizerModal } from "./WallVisualizerModal";
 import { ShieldCheck, Award, Truck, Lock, Clock, HelpCircle, Eye, ArrowRight } from "lucide-react";
@@ -19,9 +20,16 @@ export function ArtworkCommerceActions({ artwork }: ArtworkCommerceActionsProps)
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const [isVisualizerOpen, setIsVisualizerOpen] = useState(false);
   const [isInCurrentBag, setIsInCurrentBag] = useState(false);
+  const [liveStatus, setLiveStatus] = useState<Artwork["status"]>(artwork.status);
   const [isReservedState, setIsReservedState] = useState(artwork.status === "reserved");
 
   useEffect(() => {
+    const liveArt = AdminStore.getArtworks().find((a) => a.id === artwork.id);
+    if (liveArt) {
+      setLiveStatus(liveArt.status);
+      if (liveArt.status === "reserved") setIsReservedState(true);
+    }
+
     const cart = CartStore.get();
     if (cart.item && cart.item.id === artwork.id) {
       setIsInCurrentBag(true);
@@ -100,7 +108,7 @@ export function ArtworkCommerceActions({ artwork }: ArtworkCommerceActionsProps)
 
       {/* Primary Actions */}
       <div className="flex flex-col sm:flex-row gap-3 pt-2">
-        {artwork.status === "sold" ? (
+        {liveStatus === "sold" ? (
           <div className="w-full py-4 bg-[#2d2a26] text-gray-300 text-center uppercase tracking-widest text-xs font-semibold rounded-xs">
             Artwork Collected (Permanent Archive)
           </div>

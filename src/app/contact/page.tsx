@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Mail, MapPin, CheckCircle2, Send, Sparkles } from 'lucide-react';
 import { RACHANA_AGARWAL } from '@/data/catalogue';
+import { AdminStore } from '@/lib/admin/admin-store';
 
 const InstagramIcon = ({ size = 20, className = "" }) => (
   <svg 
@@ -39,11 +40,18 @@ export default function ContactPage() {
     if (!formData.name || !formData.email || !formData.message) return;
 
     setSubmitting(true);
-    // Simulate graceful API dispatch
+    AdminStore.addInquiry({
+      source: 'contact_form',
+      name: formData.name,
+      email: formData.email,
+      country: 'Global Contact Desk',
+      subject: formData.subject,
+      message: formData.message,
+    });
     setTimeout(() => {
       setSubmitting(false);
       setSubmitted(true);
-    }, 600);
+    }, 400);
   };
 
   return (

@@ -1,15 +1,22 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ARTWORKS_SEED } from "@/data/catalogue";
+import { AdminStore } from "@/lib/admin/admin-store";
+import { Artwork } from "@/types/models";
 import { ArtworkCard } from "@/components/gallery/ArtworkCard";
 import { GalleryFilters } from "@/components/gallery/GalleryFilters";
 import { Sparkles } from "lucide-react";
 
 export function GalleryCatalogView() {
   const searchParams = useSearchParams();
+  const [artworksList, setArtworksList] = useState<Artwork[]>(ARTWORKS_SEED);
+
+  useEffect(() => {
+    setArtworksList(AdminStore.getArtworks());
+  }, []);
 
   const typeParam = searchParams.get("type") || "all";
   const styleParam = searchParams.get("style") || "all";
@@ -19,7 +26,7 @@ export function GalleryCatalogView() {
 
   // Filter artworks
   const filtered = useMemo(() => {
-    let result = ARTWORKS_SEED.filter((item) => {
+    let result = artworksList.filter((item) => {
       if (typeParam !== "all" && item.type !== typeParam) return false;
       if (styleParam !== "all" && item.style.toLowerCase() !== styleParam.toLowerCase()) return false;
       if (orientationParam !== "all" && item.orientation !== orientationParam) return false;
@@ -47,7 +54,7 @@ export function GalleryCatalogView() {
 
       {/* Results Counter */}
       <div className="flex justify-between items-center mb-8 text-xs uppercase tracking-wider text-gray-500">
-        <span>Showing {filtered.length} of {ARTWORKS_SEED.length} Original Works</span>
+        <span>Showing {filtered.length} of {artworksList.length} Original Works</span>
         <span className="hidden sm:inline">Insured Worldwide Delivery • Signed Certificate Included</span>
       </div>
 

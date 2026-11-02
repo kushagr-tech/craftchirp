@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { CartStore, CartState } from "@/lib/commerce/cart-store";
+import { AdminStore } from "@/lib/admin/admin-store";
 import { LandedCostEngine } from "@/lib/commerce/landed-cost";
 import { ARTWORKS_SEED } from "@/data/catalogue";
 import { Lock, ShieldCheck, ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, CreditCard, Clock } from "lucide-react";
@@ -79,6 +80,25 @@ export default function CheckoutPage() {
     setTimeout(() => {
       // In TEST MODE: simulate order confirmation
       const orderId = `ORD-2026-${Math.floor(100000 + Math.random() * 900000)}`;
+      AdminStore.addOrder({
+        id: `ord-${Date.now()}`,
+        orderNumber: orderId,
+        customerName: formData.fullName,
+        customerEmail: formData.email,
+        customerPhone: formData.phone,
+        shippingAddress: `${formData.street1}, ${formData.city}, ${formData.state} ${formData.postalCode}, ${formData.country}`,
+        destinationCountry: formData.country,
+        artworkId: artwork.id,
+        artworkSlug: artwork.slug,
+        artworkTitle: artwork.title,
+        artworkImage: artwork.images[0]?.url,
+        amount: landedCalculation.breakdown.total,
+        currency: currency,
+        paymentStatus: 'paid',
+        shippingStatus: 'pending',
+        certificateId: artwork.certificate?.certificateId || `CC-2026-WAR-${Math.floor(100000 + Math.random() * 900000)}`,
+        createdAt: new Date().toISOString(),
+      });
       CartStore.clear();
       router.push(`/order-confirmation?orderId=${orderId}&slug=${artwork.slug}`);
     }, 1200);

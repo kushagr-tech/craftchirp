@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next';
 import { ARTWORKS_SEED, COLLECTIONS_SEED, EXHIBITIONS_SEED, RACHANA_AGARWAL } from '@/data/catalogue';
 import { JOURNAL_POSTS } from '@/data/journal';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://craftchirp.com';
   const currentDate = new Date().toISOString();

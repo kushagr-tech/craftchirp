@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Send, CheckCircle2, ShieldAlert, ArrowLeft, Sparkles } from "lucide-react";
 import { ARTWORKS_SEED } from "@/data/catalogue";
+import { AdminStore } from "@/lib/admin/admin-store";
 
 export default function RussianInquiryPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -18,6 +19,17 @@ export default function RussianInquiryPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const art = ARTWORKS_SEED.find((a) => a.id === formData.artworkId);
+    AdminStore.addInquiry({
+      source: "russia_desk",
+      name: formData.name,
+      email: formData.email,
+      country: `Russian Federation (${formData.city})`,
+      artworkId: formData.artworkId,
+      artworkTitle: art?.title || "Original Artwork",
+      subject: `Russian Collector Inquiry: ${formData.inquiryType}`,
+      message: formData.message,
+    });
     setSubmitted(true);
   };
 

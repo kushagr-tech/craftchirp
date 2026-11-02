@@ -152,17 +152,26 @@ test.describe('Craftchirp Virtual Gallery & Global Marketplace E2E', () => {
   test('8. Owner Admin management portal', async ({ page }) => {
     await page.goto('/admin');
 
+    // If PIN gate is visible, unlock with Quick Unlock button
+    const quickUnlock = page.locator('button', { hasText: /Quick Unlock/i });
+    if (await quickUnlock.isVisible()) {
+      await quickUnlock.click();
+    }
+
     // Check admin dashboard loads
-    await expect(page.locator('h1')).toContainText('Craftchirp Studio Operations');
-    await expect(page.locator('text=Rachana Agarwal Administration')).toBeVisible();
+    await expect(page.locator('h1')).toContainText('Rachana Agarwal');
 
     // Verify inventory toggle exists
-    const inventoryTab = page.locator('button, a', { hasText: /Catalog Inventory/i }).first();
+    const inventoryTab = page.locator('button, a', { hasText: /Artworks & Inventory/i }).first();
     await expect(inventoryTab).toBeVisible();
 
     // Verify orders and tracking section
-    const ordersTab = page.locator('button, a', { hasText: /Orders & Fulfillment/i }).first();
+    const ordersTab = page.locator('button, a', { hasText: /Orders & Dispatch/i }).first();
     await expect(ordersTab).toBeVisible();
+
+    // Verify inquiries section
+    const inquiriesTab = page.locator('button, a', { hasText: /Collector Inquiries/i }).first();
+    await expect(inquiriesTab).toBeVisible();
   });
 
 });

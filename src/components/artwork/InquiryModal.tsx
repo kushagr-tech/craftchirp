@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { X, Send, CheckCircle2 } from "lucide-react";
 import { Artwork } from "@/types/models";
+import { AdminStore } from "@/lib/admin/admin-store";
 
 interface InquiryModalProps {
   artwork: Artwork;
@@ -25,7 +26,17 @@ export function InquiryModal({ artwork, isOpen, onClose }: InquiryModalProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In dev / Phase 2, mock successful dispatch
+    AdminStore.addInquiry({
+      source: "pdp_inquiry",
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      country: formData.country,
+      artworkId: artwork.id,
+      artworkTitle: artwork.title,
+      subject: `Inquiry on "${artwork.title}" (${formData.questionType})`,
+      message: formData.message,
+    });
     setSubmitted(true);
   };
 
